@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             new GetWeatherInfoTask(seft).execute(city_name);
         }
     }
+
     private void initProvinces(){
         AssetManager assetManager = getAssets();
         SaxHandler handler = new SaxHandler();
