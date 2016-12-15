@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         });
         choose_dialog.setView(choose_layout);
     }
+    String a;
     private class ChooseCityListenner implements DialogInterface.OnClickListener{
 
         @Override
