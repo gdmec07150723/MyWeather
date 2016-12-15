@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -72,22 +73,20 @@ public class MainActivity extends AppCompatActivity {
         province_spinner.setAdapter(provinceAdapter);
         city_spinner = (Spinner) choose_layout.findViewById(R.id.city_spinner);
 
-        /*province_spinner.setOnItemClickListener(new AdapterView.OnItemSelectedListener() {
+        province_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String province_name = province_spinner.getSelectedItem().toString();
-                ArrayAdapter<String> cityAdapter = new ArrayAdapter<String>(
-                        seft,R.layout.simple_list_item, cityMap.get(province_name));
+                String province_name=province_spinner.getSelectedItem().toString();
+                ArrayAdapter<String> cityAdapter=new ArrayAdapter<String>(seft,R.layout.simple_list_item,cityMap.get(province_name));
                 city_spinner.setAdapter(cityAdapter);
 
             }
-
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });*/
+        });
         choose_dialog.setView(choose_layout);
     }
     private class ChooseCityListenner implements DialogInterface.OnClickListener{
